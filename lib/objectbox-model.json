@@ -1,0 +1,259 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5790608695419152537",
+      "lastPropertyId": "5:2673524711782979235",
+      "name": "Address",
+      "properties": [
+        {
+          "id": "1:3846222487873455192",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4553078910860935321",
+          "name": "town",
+          "type": 9
+        },
+        {
+          "id": "3:4384570125180821824",
+          "name": "city",
+          "type": 9
+        },
+        {
+          "id": "4:2711522495503696342",
+          "name": "province",
+          "type": 9
+        },
+        {
+          "id": "5:2673524711782979235",
+          "name": "country",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3919655169571422731",
+      "lastPropertyId": "4:2705118389734424374",
+      "name": "Contact",
+      "properties": [
+        {
+          "id": "1:7569726006224196429",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:662147049490811216",
+          "name": "countryCode",
+          "type": 9
+        },
+        {
+          "id": "3:4637065868171113316",
+          "name": "mnp",
+          "type": 9
+        },
+        {
+          "id": "4:2705118389734424374",
+          "name": "phoneCode",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:430220069305616910",
+      "lastPropertyId": "2:8990586587543432642",
+      "name": "Imagery",
+      "properties": [
+        {
+          "id": "1:945769272642080501",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8990586587543432642",
+          "name": "path",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:3919020003252424742",
+      "lastPropertyId": "2:923370276622040824",
+      "name": "Lesion",
+      "properties": [
+        {
+          "id": "1:2588520022770619557",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:923370276622040824",
+          "name": "patterns",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:4393905431606465552",
+      "lastPropertyId": "8:1994623808385028941",
+      "name": "Patient",
+      "properties": [
+        {
+          "id": "1:7100427488897085594",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8642394264285121856",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:1154373869396754028",
+          "name": "gender",
+          "type": 1
+        },
+        {
+          "id": "4:4225772569129448494",
+          "name": "editing",
+          "type": 1
+        },
+        {
+          "id": "5:3099162024490369931",
+          "name": "addressId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:5606096860801801926",
+          "relationTarget": "Address"
+        },
+        {
+          "id": "6:3475723054416550802",
+          "name": "dateOfBirth",
+          "type": 10
+        },
+        {
+          "id": "7:3499754454347781884",
+          "name": "contactId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:976081800411190137",
+          "relationTarget": "Contact"
+        },
+        {
+          "id": "8:1994623808385028941",
+          "name": "diagnosis",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5993190069187206859",
+          "name": "lesions",
+          "targetId": "4:3919020003252424742"
+        },
+        {
+          "id": "2:8981403669754616509",
+          "name": "images",
+          "targetId": "3:430220069305616910"
+        }
+      ]
+    },
+    {
+      "id": "6:8895170857120471930",
+      "lastPropertyId": "13:1566245861493886741",
+      "name": "Settings",
+      "properties": [
+        {
+          "id": "1:1273373597868336050",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5412003072210739022",
+          "name": "colorIndex",
+          "type": 6
+        },
+        {
+          "id": "3:2769269270060250802",
+          "name": "trueThemeMode",
+          "type": 1
+        },
+        {
+          "id": "4:1401276562528617677",
+          "name": "themeModeIndex",
+          "type": 6
+        },
+        {
+          "id": "5:7605769373942067071",
+          "name": "isColorsVisible",
+          "type": 1
+        },
+        {
+          "id": "6:4390360707343958008",
+          "name": "isSearching",
+          "type": 1
+        },
+        {
+          "id": "7:3926883803602625501",
+          "name": "padding",
+          "type": 8
+        },
+        {
+          "id": "8:3917036017541087792",
+          "name": "height",
+          "type": 8
+        },
+        {
+          "id": "9:4237452943417508350",
+          "name": "borderRadius",
+          "type": 8
+        },
+        {
+          "id": "10:6814091615037074717",
+          "name": "textScaleFactor",
+          "type": 8
+        },
+        {
+          "id": "11:4145241301594143221",
+          "name": "elevation",
+          "type": 8
+        },
+        {
+          "id": "12:6362890227870361645",
+          "name": "font",
+          "type": 9
+        },
+        {
+          "id": "13:1566245861493886741",
+          "name": "isAdvancedThemingMode",
+          "type": 1
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:8895170857120471930",
+  "lastIndexId": "2:976081800411190137",
+  "lastRelationId": "2:8981403669754616509",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
